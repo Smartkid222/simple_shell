@@ -1,4 +1,5 @@
 #include "shell.h"
+
 /**
  * _strcpy - Copie Source To Destination Char
  * @dest:Destination
@@ -7,17 +8,18 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-int i;
+	int i = 0;
 
-i = 0;
 	while (src[i])
 	{
 		dest[i] = src[i];
 		i++;
 	}
-dest[i] = '\0';
-return (dest);
+	dest[i] = '\0';
+
+	return (dest);
 }
+
 /**
  * _strcat - Concat Two String
  * @dest:First String
@@ -29,9 +31,7 @@ char *_strcat(char *dest, char *src)
 	char *s = dest;
 
 	while (*dest != '\0')
-	{
 		dest++;
-	}
 
 	while (*src != '\0')
 	{
@@ -40,8 +40,10 @@ char *_strcat(char *dest, char *src)
 		src++;
 	}
 	*dest = '\0';
+
 	return (s);
 }
+
 /**
  * _strchr - Locate Charactere In String
  * @s:String Search In
@@ -51,15 +53,12 @@ char *_strcat(char *dest, char *src)
 char *_strchr(char *s, char c)
 {
 
-	do		{
-
+	do {
 		if (*s == c)
-			{
 			break;
-			}
-		}	while (*s++);
+	} while (*s++);
 
-return (s);
+	return (s);
 }
 /**
  * _strncmp - Compare Amount (n) Of Characters Of Two Strings.
@@ -75,15 +74,14 @@ int _strncmp(const char *s1, const char *s2, size_t n)
 
 	if (s1 == NULL)
 		return (-1);
+
 	for (i = 0; i < n && s2[i]; i++)
-	{
 		if (s1[i] != s2[i])
-		{
 			return (1);
-		}
-	}
+
 	return (0);
 }
+
 /**
  * _strdup - Duplicate A String
  * @str:String
@@ -96,15 +94,12 @@ char *_strdup(char *str)
 
 	len = _strlen(str);
 	str2 = malloc(sizeof(char) * (len + 1));
+
 	if (!str2)
-	{
 		return (NULL);
-	}
 
 	for (i = 0; i <= len; i++)
-	{
 		str2[i] = str[i];
-	}
 
 	return (str2);
 }

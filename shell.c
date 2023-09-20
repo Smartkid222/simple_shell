@@ -21,16 +21,15 @@ int main(__attribute__((unused)) int argc, char **argv)
 		if (isatty(STDIN_FILENO))
 			prompt();
 		input = _getline();
+
 		if (input[0] == '\0')
-		{
 			continue;
-		}
+
 		history(input);
 		cmd = parse_cmd(input);
+
 		if (_strcmp(cmd[0], "exit") == 0)
-		{
 			exit_bul(cmd, input, argv, counter);
-		}
 		else if (check_builtin(cmd) == 0)
 		{
 			st = handle_builtin(cmd, st);
@@ -38,14 +37,14 @@ int main(__attribute__((unused)) int argc, char **argv)
 			continue;
 		}
 		else
-		{
 			st = check_cmd(cmd, input, counter, argv);
 
-		}
 		free_all(cmd, input);
 	}
 	return (statue);
 }
+
+
 /**
  * check_builtin - check builtin
  *
@@ -62,10 +61,9 @@ int check_builtin(char **cmd)
 		{NULL, NULL}
 	};
 	int i = 0;
-		if (*cmd == NULL)
-	{
+
+	if (*cmd == NULL)
 		return (-1);
-	}
 
 	while ((fun + i)->command)
 	{
@@ -75,6 +73,8 @@ int check_builtin(char **cmd)
 	}
 	return (-1);
 }
+
+
 /**
  * creat_envi - Creat Array of Enviroment Variable
  * @envi: Array of Enviroment Variable
