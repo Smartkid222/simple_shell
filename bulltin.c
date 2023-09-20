@@ -151,3 +151,4 @@ int echo_bul(char **cmd, int st)
 
 	return (1);
 }
+

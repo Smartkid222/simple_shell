@@ -110,4 +110,3 @@ typedef struct  bulltin
 } bul_t;
 
 #endif
-

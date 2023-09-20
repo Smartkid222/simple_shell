@@ -88,4 +88,3 @@ void creat_envi(char **envi)
 		envi[i] = _strdup(environ[i]);
 	envi[i] = NULL;
 }
-
