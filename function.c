@@ -43,6 +43,7 @@ char *_strcat(char *dest, char *src)
 
 	return (s);
 }
+
 /**
  * _strchr - Locate Charactere In String
  * @s:String Search In
@@ -52,15 +53,12 @@ char *_strcat(char *dest, char *src)
 char *_strchr(char *s, char c)
 {
 
-	do		{
-
+	do {
 		if (*s == c)
-			{
 			break;
-			}
-		}	while (*s++);
+	} while (*s++);
 
-return (s);
+	return (s);
 }
 /**
  * _strncmp - Compare Amount (n) Of Characters Of Two Strings.
