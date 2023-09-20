@@ -43,6 +43,8 @@ int main(__attribute__((unused)) int argc, char **argv)
 	}
 	return (statue);
 }
+
+
 /**
  * check_builtin - check builtin
  *
@@ -71,6 +73,8 @@ int check_builtin(char **cmd)
 	}
 	return (-1);
 }
+
+
 /**
  * creat_envi - Creat Array of Enviroment Variable
  * @envi: Array of Enviroment Variable
