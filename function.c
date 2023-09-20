@@ -74,15 +74,14 @@ int _strncmp(const char *s1, const char *s2, size_t n)
 
 	if (s1 == NULL)
 		return (-1);
+
 	for (i = 0; i < n && s2[i]; i++)
-	{
 		if (s1[i] != s2[i])
-		{
 			return (1);
-		}
-	}
+
 	return (0);
 }
+
 /**
  * _strdup - Duplicate A String
  * @str:String
@@ -95,15 +94,12 @@ char *_strdup(char *str)
 
 	len = _strlen(str);
 	str2 = malloc(sizeof(char) * (len + 1));
+
 	if (!str2)
-	{
 		return (NULL);
-	}
 
 	for (i = 0; i <= len; i++)
-	{
 		str2[i] = str[i];
-	}
 
 	return (str2);
 }
