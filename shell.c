@@ -29,9 +29,7 @@ int main(__attribute__((unused)) int argc, char **argv)
 		cmd = parse_cmd(input);
 
 		if (_strcmp(cmd[0], "exit") == 0)
-		{
 			exit_bul(cmd, input, argv, counter);
-		}
 		else if (check_builtin(cmd) == 0)
 		{
 			st = handle_builtin(cmd, st);
@@ -39,10 +37,8 @@ int main(__attribute__((unused)) int argc, char **argv)
 			continue;
 		}
 		else
-		{
 			st = check_cmd(cmd, input, counter, argv);
 
-		}
 		free_all(cmd, input);
 	}
 	return (statue);
